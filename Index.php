@@ -16,8 +16,8 @@ while(have_posts()) :the_post();//LOOP through all the posts and find the one th
 <?php
 endwhile;
 endif;
-wp_reset_query();?>    
-
+wp_reset_query();?>
+          
  <div class="blocker"></div>
           
           </div> <!--  container-->

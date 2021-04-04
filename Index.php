@@ -69,7 +69,6 @@ $queried_post = get_post($post_id);?>
 <?php echo $queried_post->post_excerpt; ?>
 <?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>
                   
-              <p class="readmore"> CONTINUE READING</p>
           </div>
                </div><!--            row-->
           </div><!--          container-->

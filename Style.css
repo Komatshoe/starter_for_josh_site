@@ -47,7 +47,7 @@ a:hover{
     background-size: cover;
 }
 
-small_herobg {
+.small_herobg{
     width: 100%;
     background: url("images/small_header_bg.jpg") no-repeat center center;
     background-size: cover;/*make the background image cover the whole div proportionally*/

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Your Template Name
+Template Name: CV
 */
 ?>
 <?php get_header(); /* Tells WordPress to include header.php */ ?>

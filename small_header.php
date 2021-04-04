@@ -73,7 +73,6 @@
       
       <!--  div for the main image the stretches to the edge of the page -->
 <div class="container"> <!-- holds the content in the middle of the page -->
-  <h1> Games Design For the Future </h1> <!-- the main tag line -->
-</div> <!-- Container -->
+  </div> <!-- Container -->
       
 </header>

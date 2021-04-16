@@ -4,8 +4,7 @@
     */
     ?>
 <?php get_header(); /* Tells WordPress to include header.php */ ?>
-
-      <section class="container-fluid aboutbg text-center">
+<section class="container-fluid aboutbg text-center">
       
       <div class="container">
             
@@ -29,12 +28,16 @@
            <div class="container">
           <div class="row"> <!--  a row that gives us access to the BS columns-->
                        <div>
-          <h3 class="text-center article-title"> LATEST ARTICLES</h3>
+               <h3 class="text-center article-title "><?php the_field('titleforarticles'); ?></h3>
+
           
           </div>
       
           <div class="col-md-4 article-cent">
-              
+                <img class="img-responsive" alt=“portait” src="<?php the_field('articleimage'); ?>">
+              <h4><?php the_field('articletitle'); ?></h4>
+              <p><?php the_field('articleexcerpt'); ?></p>
+              <a href="<?php the_field('readmore'); ?>" class="readmore">CONTINUE READING</a>
 <!--placeholder for col1-->
 
           </div>

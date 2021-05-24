@@ -1,11 +1,11 @@
 <?php get_header(); /* Tells WordPress to include header.php */ ?>
 
+<section class="container-fluid aboutbg text-center">
+
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('main_tag') ) : 
 endif; ?>
-
-<section class="container-fluid aboutbg text-center">
-      
-        <div class="container">
+    
+    <div class="container">
           
 <?php
 global $more;//define a global variable
@@ -14,7 +14,7 @@ query_posts('cat=2');//look for posts that have the category of 2
 if(have_posts()) ://if we have posts to display
 while(have_posts()) :the_post();//LOOP through all the posts and find the one that has a category of 2 get thet title and content
 ?>
-<h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2> 
+<h2 class="fadeInRight"><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2> 
             <div><p class="about-text"><?php the_content() ?></p></div>
 <?php
 endwhile;
@@ -32,7 +32,7 @@ wp_reset_query();?>
            <div class="container">
           <div class="row"> <!--  a row that gives us access to the BS columns-->
                        <div>
-          <h3 class="text-center article-title"> LATEST ARTICLES</h3>
+          <h3 class="text-center article-title wow bouneInUp"> LATEST ARTICLES</h3>
           
           </div>
       

@@ -1,8 +1,11 @@
 <?php get_header(); /* Tells WordPress to include header.php */ ?>
 
-      <section class="container-fluid aboutbg text-center">
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('main_tag') ) : 
+endif; ?>
+
+<section class="container-fluid aboutbg text-center">
       
-      <div class="container">
+        <div class="container">
           
 <?php
 global $more;//define a global variable
@@ -20,11 +23,8 @@ wp_reset_query();?>
           
  <div class="blocker"></div>
           
-          </div> <!--  container-->
-    
-      
-      
-      </section>
+        </div> <!--  container-->
+</section>
       
       
       <section class="container-fluid articlesbg">

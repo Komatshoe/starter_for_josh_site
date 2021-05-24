@@ -6,11 +6,14 @@
 <?php get_header(); /* Tells WordPress to include header.php */ ?>
 <section class="container-fluid aboutbg text-center">
       
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('main_tag') ) : 
+endif; ?>
+    
       <div class="container">
             
           <!--placeholder for about me-->
-          <h2 class="animate fadeInLeft"><?php the_field('titleforaboutme'); ?></h2><!--  custom field for the aboutme content-->
-          <p class="particle animate fadeInRight"><?php the_field('subtitleforaboutme'); ?></p>
+          <h2 class="animated fadeInLeft"><?php the_field('titleforaboutme'); ?></h2><!--  custom field for the aboutme content-->
+          <p class="particle animated fadeInRight"><?php the_field('subtitleforaboutme'); ?></p>
           <p class="about-text"><?php the_field('paragraphforaboutme'); ?></p>
 
           
@@ -28,7 +31,7 @@
            <div class="container">
           <div class="row"> <!--  a row that gives us access to the BS columns-->
                        <div>
-               <h3 class="text-center article-title "><?php the_field('titleforarticles'); ?></h3>
+               <h3 class="text-center article-title  wow fadeInLeft"><?php the_field('titleforarticles'); ?></h3>
 
           
           </div>

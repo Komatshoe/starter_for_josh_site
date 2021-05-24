@@ -9,7 +9,7 @@
       <div class="container">
             
           <!--placeholder for about me-->
-          <h2 class="animate fadeInRight"><?php the_field('titleforaboutme'); ?></h2><!--  custom field for the aboutme content-->
+          <h2 class="animate fadeInLeft"><?php the_field('titleforaboutme'); ?></h2><!--  custom field for the aboutme content-->
           <p class="particle animate fadeInRight"><?php the_field('subtitleforaboutme'); ?></p>
           <p class="about-text"><?php the_field('paragraphforaboutme'); ?></p>
 

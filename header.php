@@ -75,7 +75,7 @@
 </nav>
       
       <!--  div for the main image the stretches to the edge of the page -->
-<div class="container"> <!-- holds the content in the middle of the page -->
+<div class="container animated fadeInRight"> <!-- holds the content in the middle of the page -->
   <h1><?php the_field('maintagline'); ?></h1> <!-- the main tag line -->
 </div> <!-- Container -->
       

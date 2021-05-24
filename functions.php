@@ -6,7 +6,7 @@ wp_enqueue_style( 'test', get_stylesheet_directory_uri() . '/responsive.css' );
 wp_enqueue_style( 'tester', get_template_directory_uri() . '/css/animate.min.css' );
 wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), null, false);
 wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.0.0', true );
-//wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array(), '', true );
+wp_enqueue_script( 'wow', get_template_directory_uri() . '/js/wow.min.js', array(), '', true );
 }
  
 add_action( 'wp_enqueue_scripts', 'theme_add_bootstrap' );
@@ -25,6 +25,7 @@ if($args->list_item_class){$classes[] = $args->list_item_class;
     }
 add_filter('nav_menu_css_class', 'add_menu_list_item_class', 1, 3);
  ?>
+
 <?php
 	if ( get_field(' headerbackgroundimage') ) {
 		echo 'style="background: url(' . get_field(' headerbackgroundimage') . ')"';
@@ -43,4 +44,23 @@ function tagline() {
 		'after_title'   => '</h2>',
 	) );
 
- }?>
+}
+add_action( 'widgets_init', 'tagline' );
+?>
+
+<?php
+add_action('wp_enqueue_scripts', 'sk_wow_init_in_footer');
+
+function sk_wow_init_in_footer() {
+add_action( 'print_footer_scripts', 'wow_init' );
+ 
+}
+
+
+function wow_init() { ?>
+    
+    <script type="text/javascript">
+            new WOW().init();
+ </script>
+
+<?php }

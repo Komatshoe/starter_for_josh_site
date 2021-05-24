@@ -43,6 +43,7 @@ a:hover{
 }
 
 .herobg{
+    width: 100%;
     background: url(images/header.jpg);
     background-size: cover;
 }

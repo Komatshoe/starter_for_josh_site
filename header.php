@@ -41,6 +41,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
     <link href="Style.css" rel="stylesheet">
     <link href="responsive.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
   
